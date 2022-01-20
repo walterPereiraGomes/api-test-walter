@@ -4,6 +4,8 @@ const purchasesRoutes = require('../src/handlers/purchases')
 
 app.use(purchasesRoutes);
 
-app.listen(8081, () => {
+const port = proccess.env.PORT || 3000;
+
+app.listen(port, () => {
     console.log('server is running!');
 })
