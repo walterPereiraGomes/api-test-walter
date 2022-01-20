@@ -1,12 +1,8 @@
 var express = require("express");
 const app = express();
-// const purchasesRoutes = require('../src/handlers/purchases')
+const purchasesRoutes = require('../src/handlers/purchases')
 
-// app.use(purchasesRoutes);
-
-app.get('/', (req, res) => {
-    res.send('David Gay!');
-})
+app.use(purchasesRoutes);
 
 const port = process.env.PORT || 3000;
 
