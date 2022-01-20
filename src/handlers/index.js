@@ -4,8 +4,10 @@ const purchasesRoutes = require('./purchases')
 
 const start = () => {
     app.use(purchasesRoutes);
+
+    const port = process.env.PORT || 8081
     
-    app.listen(8081, () => {
+    app.listen(port, () => {
         console.log('server is running!');
     })
 }
